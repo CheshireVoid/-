@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Цвета, к которым будем обращаться */
+:root {
+    --header-bc: #15803D;     /* Цвет шапки и карточек */
+    --footer-bc: #14532D;     /* Цвет подвала */
+    --main-bc: #0B1510;       /* Фон страницы */
+
+    --colore-main: #FFFFFF;   /* Основной цвет текста */
+    --colore-title: #86EFAC;  /* Цвет заголовков и акцентов */
+
+    --text-size-title: 36px;
+    --text-main: 18px;
+    --text-header: 16px;
+    --text-btn: 16px;
+}
+
+/* Сама шапка */
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--header-bc);
+    padding: 10px 0;
+}
+
+/* Ссылки в шапке */
+header a {
+    color: var(--colore-main);
+    font-size: var(--text-header);
+}
+
+/* Основная часть */
+main {
+    background-color: var(--main-bc);
+    padding: 10px;
+    background-attachment: fixed;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--footer-bc);
+    min-height: 40px;
+}
+
+/* Блок приветствия */
+.welcome {
+    display: flex;              /* Текст и картинка в одну строчку */
+    padding: 40px 100px;
+    gap: 40px;
+    min-height: 400px;
+}
+
+.flex {
+    display: flex;
+    width: 50%;
+    flex-direction: column;     /* Текст под заголовком */
+}
+
+.title {
+    color: var(--colore-title);
+    font-size: var(--text-size-title);
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--colore-main);
+    font-size: var(--text-main);
+}
+
+.foto {
+    width: 50%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Выпадающие списки */
+.select-block {
+    display: flex;              /* Все списки в ряд */
+    gap: 15px;                  /* Отступ между списками */
+    margin: 30px 0 30px 100px;  /* Отступ всего блока на странице */
+}
+
+.select-item {
+    background-color: var(--header-bc);
+    color: var(--colore-main);
+    border: 1px solid var(--colore-title);
+    padding: 10px 35px 10px 15px;
+    font-size: var(--text-main);
+    cursor: pointer;
+}
+
+/* Первые три горизонтальные карточки */
+.cartochki {
+    display: flex;
+    gap: 20px;                  /* Промежутки между карточками */
+    padding: 20px 100px;        /* Внутренние отступы по краям */
+}
+
+.cartochka {
+    display: flex;
+    flex: 1;                    /* Каждая карточка занимает 1/3 ширины */
+    min-height: 200px;          /* Минимальная высота карточки */
+    background-color: var(--header-bc);
+}
+
+.cart-img {
+    width: 50%;                 /* Половина ширины карточки */
+    position: relative;         /* Опорная точка для картинки */
+    overflow: hidden;           /* Обрезает всё, что выходит за границы */
+    border: 1px solid #ffffff;
+}
+
+.cart-img img {
+    position: absolute;         /* Растягиваем строго по краям рамки */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Заполняет весь блок без искажения пропорций */
+}
+
+.card-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Центрирование текста по вертикали */
+    align-items: flex-start;    /* Выравнивание текста по левому краю */
+    padding: 20px;
+}
+
+/* --- Сетка из 4 вертикальных карточек --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 равные колонки */
+    gap: 20px;                             /* Отступы между карточками */
+    padding: 20px 100px;                   /* Отступы по бокам, как у welcome */
+}
+
+/* Элемент вертикальной карточки */
+.card-vertical {
+    background-color: var(--header-bc);
+    border: 1px solid var(--colore-title);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                   /* Выравнивание по центру */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении мыши */
+.card-vertical:hover {
+    transform: translateY(-5px);           /* Карточка слегка приподнимается */
+    box-shadow: 0 8px 20px rgba(134, 239, 172, 0.25);
+}
+
+/* Блок картинки в вертикальной карточке */
+.card-vertical-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid #ffffff;
+}
+
+.card-vertical-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                     /* Картинка заполняет рамку без искажений */
+}
+
+/* Смещение фокуса на мордочку удивлённого кота */
+.cat-surprised {
+    object-position: bottom;
+}
+
+/* Заголовок в вертикальной карточке */
+.card-vertical-title {
+    color: var(--colore-title);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* Описание в вертикальной карточке */
+.card-vertical-desc {
+    color: var(--colore-main);
+    font-size: 14px;
+    margin-bottom: 15px;
+    flex-grow: 1;                          /* Толкает кнопку вниз, выравнивая кнопки в ряд */
+}
+
+/* Дизайн кнопки */
+.card-vertical-btn {
+    background-color: var(--main-bc);
+    color: var(--colore-title);
+    border: 1px solid var(--colore-title);
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: var(--text-btn);
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.card-vertical-btn:hover {
+    background-color: var(--colore-title);
+    color: var(--main-bc);
+}
+
+/* --- Адаптивность под маленькие экраны --- */
+@media screen and (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;           /* 1 колонка на смартфонах */
+        padding: 20px 20px;
+    }
+}

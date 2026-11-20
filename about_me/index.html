@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav><a href="#">Главная</a></nav>
+    <nav><a href="#">Факты</a></nav>
+    <nav><a href="#">Информация</a></nav>
+    <nav><a href="#">Видео</a></nav>
+</header>
+
+<main>
+    <!-- Блок приветствия -->
+    <section class="welcome">
+        <div class="foto">
+            <img src="./img/image.png" alt="КОТЕ">
+        </div>
+        <div class="flex">
+            <h1 class="title">Мое имя: Жмяк</h1>
+            <p class="description">и это мой сайт</p>
+        </div>
+    </section>
+
+    <!-- Выпадающие списки -->
+    <section class="select-block">
+        <select name="coolness" id="coolness" class="select-item">
+            <option value="cool">крут</option>
+            <option value="very-cool" selected>оч крут</option>
+            <option value="not-so-cool">не оч крут</option>
+        </select>
+        <select name="letters" id="letters" class="select-item">
+            <option class="option" value="Z">Z</option>
+            <option class="option" value="O">O</option>
+            <option class="option" value="V">V</option>
+        </select>
+    </section>
+
+    <!-- Первые три горизонтальные карточки -->
+    <div class="cartochki">
+        <section class="cartochka">
+            <div class="cart-img">
+                <img src="./img/artworks-000298749006-5gqxt7-t500x500.jpg" alt="второй кот в хлебе">
+            </div>
+            <div class="card-text">
+                <h2 class="title">Это ещё кот в хлебе</h2>
+                <p class="description">он реально крут</p>
+            </div>
+        </section>
+
+        <section class="cartochka">
+            <div class="cart-img">
+                <img src="./img/images.jpg" alt="удивлённый кот">
+            </div>
+            <div class="card-text">
+                <h2 class="title">Этот кот крайне удивлён</h2>
+                <p class="description">он тоже хорош в своем непонимании</p>
+            </div>
+        </section>
+
+        <section class="cartochka">
+            <div class="cart-img">
+                <img src="./img/image copy.png" alt="заспанный кот">
+            </div>
+            <div class="card-text">
+                <h2 class="title">Этот кот крайне сплюч</h2>
+                <p class="description">он невероятен в своем невдуплении</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Новый блок: сетка из 4 вертикальных карточек -->
+    <section class="cards-grid">
+        <div class="card-vertical">
+            <div class="card-vertical-img">
+                <img src="./img/artworks-000298749006-5gqxt7-t500x500.jpg" alt="Кот в хлебе">
+            </div>
+            <h3 class="card-vertical-title">Хлебный кот</h3>
+            <p class="card-vertical-desc">Мастер маскировки среди батонов и буханок.</p>
+            <a href="#" class="card-vertical-btn">Подробнее</a>
+        </div>
+
+        <div class="card-vertical">
+            <div class="card-vertical-img">
+                <img src="./img/images.jpg" alt="Удивленный кот" class="cat-surprised">
+            </div>
+            <h3 class="card-vertical-title">Удивленный кот</h3>
+            <p class="card-vertical-desc">Постоянно пребывает в глубоком шоке от происходящего.</p>
+            <a href="#" class="card-vertical-btn">Подробнее</a>
+        </div>
+
+        <div class="card-vertical">
+            <div class="card-vertical-img">
+                <img src="./img/image copy.png" alt="Сплюш">
+            </div>
+            <h3 class="card-vertical-title">Кот Сплюш</h3>
+            <p class="card-vertical-desc">Эксперт по сну и полному невдуплению.</p>
+            <a href="#" class="card-vertical-btn">Подробнее</a>
+        </div>
+
+        <div class="card-vertical">
+            <div class="card-vertical-img">
+                <img src="./img/image.png" alt="Жмяк">
+            </div>
+            <h3 class="card-vertical-title">Главный Жмяк</h3>
+            <p class="card-vertical-desc">Создатель и вдохновитель этого прекрасного сайта.</p>
+            <a href="#" class="card-vertical-btn">Подробнее</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
